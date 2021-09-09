@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring Boot Session Management Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(function () {
+            updateSubmitState();
+
+            $('#note').keyup(function () {
+                updateSubmitState();
+            });
+
+        });
+
+        function updateSubmitState(){
+            let val = $('#note').val();
+
+            if(val && val.length > 0){
+                $('#submit').removeAttr('disabled');
+            }else {
+                $('#submit').attr('disabled', 'disabled');
+            }
+        }
+    </script>
+</head>
+<body>
+<div>
+    <h3>Signed In As: <label th:text="${username}"/></h3>
+</div>
+
+<div>
+    <h3>Customer: <label th:text="|${customer.surname}, ${customer.firstName}|"/></h3>
+</div>
+
+
+<br />
+<div>
+    <form th:action="@{/addNote}" method="post">
+        <input id="note" name="note" type="text" /> <input id='submit' type="submit" value="Add Note"/>
+    </form>
+</div>
+<br />
+<br />
+<div>
+    <form th:action="@{/invalidate/session}" method="post">
+        <input type="submit" value="Destroy Session"/>
+    </form>
+</div>
+<br />
+<div>
+    <h2>Notes</h2>
+    <ul th:each="note : ${notesSession}">
+        <li th:text="${note}">note</li>
+    </ul>
+</div>
+
+</body>
+</html>

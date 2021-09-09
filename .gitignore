@@ -1,0 +1,6 @@
+# Project exclude paths
+/session-sandbox-app/target/
+/session-sandbox-backend/target/
+/session-sandbox-frontend/node_modules/
+/session-sandbox-frontend/target/
+/session-sandbox-uat/target/

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring Boot Session Management Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(function () {
+        });
+    </script>
+</head>
+<body>
+
+
+<div>
+    <h3>Customer: <label th:text="|${customer.surname}, ${customer.firstName}|"></label></h3>
+</div>
+
+<br />
+<br />
+<div>
+    <form th:action="@{/invalidate/session}" method="post">
+        <input type="submit" value="Destroy Session"/>
+    </form>
+</div>
+
+</body>
+</html>

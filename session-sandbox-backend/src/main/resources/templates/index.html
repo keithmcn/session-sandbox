@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring Boot Session Management Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(function () {
+            if(performance.navigation.type === 2){
+                location.reload(true);
+            }
+        });
+    </script>
+</head>
+<body>
+
+<div>
+    <h2>Select Customer</h2>
+
+    <div>
+        <form th:action="@{/selectCustomer}" method="post">
+            <label for="selectCustomer">Choose: </label>
+            <select id="selectCustomer" name="customerId">
+                <option th:each="customer : ${customers}"
+                        th:value="${customer.id}" th:text="|${customer.surname}, ${customer.firstName}|">
+                </option>
+            </select>
+            <br/>
+            <br/>
+            <br/>
+            <input type="submit" value="Proceed">
+        </form>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <div>
+        You are currently dealing with Customer: <i><label th:text="${customerName}"></label></i>
+    </div>
+
+</div>
+
+</body>
+</html>

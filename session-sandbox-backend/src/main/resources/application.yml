@@ -1,0 +1,18 @@
+spring:
+  profiles:
+    active: in-mem-db
+  main:
+    banner-mode: "off"
+  session:
+    store-type: jdbc
+    jdbc:
+      initialize-schema: always
+    timeout: 10m
+
+security:
+  basic:
+    enabled: false
+
+logging:
+  file:
+    name: ${user.home}/logs/symbiosis.log
