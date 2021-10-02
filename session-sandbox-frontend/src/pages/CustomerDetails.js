@@ -77,15 +77,11 @@ const Home = () => {
 
                   <form action='selectCustomer' method="post">
                       <label htmlFor="selectCustomer">Choose: </label>
-                      <select id="selectCustomer" name="customerId">
-                          <option th:each="customer : ${customers}"
-                                  th:value="${customer.id}" th:text="|${customer.surname}, ${customer.firstName}|">
-                          </option>
-                      </select>
+
                       <br/>
                       <br/>
                       <br/>
-                      <input type="submit" value="Proceed">
+                      <input type="submit" value="Proceed"/>
                   </form>
 
                   <Form>
