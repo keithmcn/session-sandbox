@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import ResourceCard from './ResourceCard';
-import { Col } from 'reactstrap';
 
 const ResourceListView = () => {
 
@@ -16,8 +15,8 @@ const ResourceListView = () => {
                     setResources(res);
                 } else {
                     const text = await response.text();
-                    return Promise.
-                        reject(response.status + ' - ' + response.statusText + '  --  ' + text);
+                    return Promise
+                        .reject(response.status + ' - ' + response.statusText + '  --  ' + text);
                 }
             })
              .catch(error => {

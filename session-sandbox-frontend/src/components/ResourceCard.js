@@ -1,8 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../App.css';
-import { Container, Col, Row, Card,
-            CardHeader, CardTitle, CardBody, CardText}
-            from 'reactstrap';
+import { Card, CardHeader, CardTitle, CardBody, CardText} from 'reactstrap';
 
 const ResourceCard = ({resource}) => {
     return (
