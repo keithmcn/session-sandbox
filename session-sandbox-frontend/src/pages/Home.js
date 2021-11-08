@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import '../App.css';
 import AppNavbar from '../components/AppNavbar';
 import ResourceListView from '../components/ResourceListView';
-import { Container, Row, Col, CardGroup} from 'reactstrap';
+import { Container, Row } from 'reactstrap';
 
 const Home = () => {
     return (

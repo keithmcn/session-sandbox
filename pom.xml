@@ -19,8 +19,8 @@
 
 	<properties>
 		<java.version>11</java.version>
-		<node.version>v10.19.0</node.version>
-		<yarn.version>v1.22.5</yarn.version>
+		<node.version>v12.13.1</node.version>
+		<yarn.version>v1.22.11</yarn.version>
 	</properties>
 
 	<modules>
