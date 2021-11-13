@@ -11,5 +11,4 @@ public class Contract {
 
     private boolean telephone;
 
-    private boolean persisted;
 }

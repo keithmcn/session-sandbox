@@ -17,7 +17,10 @@ const AppNavbar = (props) => {
             <NavLink href="/home">View All</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="/details">Details</NavLink>
+            <NavLink href="/select">Select</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="/add">Add</NavLink>
           </NavItem>
         </Nav>
         <Nav>

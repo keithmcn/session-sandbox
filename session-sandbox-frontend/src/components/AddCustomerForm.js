@@ -4,7 +4,7 @@ import { Field, Form, withFormik } from 'formik';
 import FormInput from './FormInput'
 import { FormGroup, Button } from 'reactstrap';
 
-const CustomerDetailsForm = props => {
+const AddCustomerForm = props => {
      const {
         values,
         touched,
@@ -42,7 +42,7 @@ const CustomerDetailsForm = props => {
     );
 };
 
-const ValidatedCustomerDetailsForm = withFormik({
+const ValidatedAddCustomerForm = withFormik({
     mapPropsToValues: () => ({
         firstName: '',
         lastName: '',
@@ -74,9 +74,9 @@ const ValidatedCustomerDetailsForm = withFormik({
    },
 
    displayName: 'CustomerDetails',
- })(CustomerDetailsForm);
+ })(AddCustomerForm);
 
-export default ValidatedCustomerDetailsForm;
+export default ValidatedAddCustomerForm;
 
 
 // <label htmlFor="firstName">First Name</label>

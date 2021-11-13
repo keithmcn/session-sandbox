@@ -56,3 +56,8 @@ legend {
     height: 18em;
     margin: 1em;
 }
+
+.cusDetailsContainer {
+    padding: 1em;
+    border: solid 0.5px lightGray;
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import '../App.css';
 import AppNavbar from '../components/AppNavbar';
-import ResourceListView from '../components/ResourceListView';
+import CustomerListView from '../components/CustomerListView';
 import { Container, Row } from 'reactstrap';
 
 const Home = () => {
@@ -10,7 +10,7 @@ const Home = () => {
         <AppNavbar />
         <Container>
           <Row>
-            <ResourceListView/>
+            <CustomerListView/>
           </Row>
         </Container>
       </div>

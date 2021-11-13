@@ -1,20 +1,20 @@
 import React from 'react';
 import '../App.css';
 import AppNavbar from '../components/AppNavbar';
-import ValidatedCustomerDetailsForm from '../components/CustomerDetailsForm'
+import ValidatedAddCustomerForm from '../components/AddCustomerForm'
 import { Container, Row } from 'reactstrap';
 
-const CustomerDetails = () => {
+const AddCustomer = () => {
     return (
       <div>
           <AppNavbar />
           <Container>
             <Row>
-                <ValidatedCustomerDetailsForm/>
+                <ValidatedAddCustomerForm/>
             </Row>
           </Container>
       </div>
     );
 }
 
-export default CustomerDetails;
+export default AddCustomer;
